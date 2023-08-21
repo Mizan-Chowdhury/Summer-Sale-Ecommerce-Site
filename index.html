@@ -3,32 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind and daisy link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@700&family=Lato:wght@400;700;900&family=Manrope:wght@700&family=Open+Sans:wght@400;700;800&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&family=Work+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="index.css" />
-    <title>B8A5 Summer Sale</title>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-          },
-        },
-      };
-    </script>
+    <title>Summer Sale</title>
     <style>
       .work-sans {
         font-family: "Work Sans", sans-serif;
@@ -38,35 +27,42 @@
   <body class="work-sans">
     <header>
       <section
-        class="bg-[#F9F6E2] lg:flex md:flex justify-between items-center lg:px-20 p-5 gap-5"
+        class="bg-[#F9F6E2] lg:flex md:flex justify-between items-center lg:px-16 md:px-10 lg:py-20 py-10 gap-10"
       >
-        <div class="text-center lg:w-2/3">
-          <h3 class="lg:text-2xl text-lg font-bold mb-10">---SALE FEVER---</h3>
+        <div class="text-center lg:w-2/3 m-auto">
+          <h3 class="lg:text-2xl text-lg font-bold mb-5">---SALE FEVER---</h3>
           <h1 class="lg:text-6xl text-4xl font-semibold mb-10">
             Purchase TK 200 or above & get
             <span class="text-[#E527B2]">20% off</span>
           </h1>
           <label for="" class="font-medium">Use Promo Code</label>
-          <button id="couponBtn" class="bg-[#E527B2] text-white px-3 py-1 rounded">
+          <button
+            id="couponBtn"
+            class="bg-[#E527B2] text-white px-3 py-1 rounded"
+          >
             SELL200
           </button>
         </div>
         <div>
-          <img src="images/Summer 1.png" alt="" />
+          <img
+            class="lg:w-[35rem] md:w-96 w-72 m-auto"
+            src="images/Summer1.png"
+            alt=""
+          />
         </div>
       </section>
     </header>
 
     <!-- card section -->
 
-    <main class="py-20 px-10">
+    <main class="lg:py-20 py-10 lg:px-10 px-3">
       <h1 class="font-semibold lg:text-5xl md:text-4xl text-3xl">
         Kitchenware
       </h1>
-      <div class="lg:flex mt-10">
+      <div class="lg:flex lg:mt-10 mt-5">
         <div class="lg:flex-auto">
           <div
-            class="lg:grid grid-cols-3 md:grid gap-5 lg:space-y-0 md:space-y-0 space-y-5"
+            class="lg:grid grid-cols-3 md:grid gap-5 lg:space-y-0 md:space-y-0 space-y-5 px-3"
           >
             <div class="shadow-lg p-5" onclick="cards(this)">
               <div class="bg-[#1111110D] rounded-lg py-5">
@@ -180,11 +176,13 @@
               </div>
             </div>
           </div>
-          <h1 class="font-semibold lg:text-5xl my-10 md:text-4xl text-3xl">
+          <h1
+            class="font-semibold lg:text-5xl lg:my-10 my-5 md:text-4xl text-3xl"
+          >
             Sportswear
           </h1>
           <div
-            class="lg:grid grid-cols-3 md:grid gap-5 lg:space-y-0 md:space-y-0 space-y-5"
+            class="lg:grid grid-cols-3 md:grid gap-5 lg:space-y-0 md:space-y-0 space-y-5 px-3"
           >
             <div class="shadow-lg p-5" onclick="cards(this)">
               <div class="bg-[#1111110D] rounded-lg py-10">
@@ -301,6 +299,7 @@
         </div>
 
         <!-- cart section -->
+        
         <div class="lg:w-1/4 lg:p-5 py-10">
           <div class="bg-[#1111110D] p-5 mb-5">
             <h1 class="font-semibold mb-3 text-lg">Have coupon?</h1>
@@ -314,7 +313,7 @@
             <button
               id="btn1"
               type="button"
-              class="bg-[#E527B2] text-white absolute -ml-[68px] p-[4.5px] px-3 rounded-r disabled:opacity-40"
+              class="bg-[#E527B2] text-white absolute -ml-[68px] p-[4.5px] px-3 rounded-r disabled:opacity-70"
               disabled
               onclick="btn1()"
             >
@@ -345,17 +344,23 @@
           <div>
             <button
               id="btn-2"
-              class="bg-[#E527B2] text-white px-10 py-2 rounded absolute lg:ml-14 md:ml-60 ml-16 -mt-5 disabled:opacity-40"
+              class="bg-[#E527B2] text-white px-10 py-2 rounded absolute lg:ml-10 md:ml-64 ml-24 -mt-5 disabled:opacity-70"
               disabled
-              onclick="my_modal_1.showModal()"
+              onclick="my_modal_4.showModal()"
             >
-              open modal
+              Make Purchase
             </button>
-            <dialog id="my_modal_1" class="modal">
-              <form class="modal-box">
-                <img class="w-1/4 m-auto my-10" src="images/congo.png" alt="" />
+            <dialog id="my_modal_4" class="modal">
+              <form method="dialog" class="modal-box">
+                <img
+                  class="w-1/4 m-auto lg:my-6"
+                  src="images/congo.png"
+                  alt=""
+                />
                 <div class="text-center">
-                  <h3 class="font-bold text-4xl">Congratulations</h3>
+                  <h3 class="font-bold lg:text-4xl md:text-3xl text-2xl">
+                    Congratulations
+                  </h3>
                   <p class="py-4">Your Purchase the product</p>
                   <button
                     class="bg-[#E527B2] text-white rounded-lg px-10 py-2"

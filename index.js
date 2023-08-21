@@ -15,9 +15,6 @@ function cards(data) {
     parseFloat(totalPriceValueString) + parseFloat(cardsPriceValue);
   totalPriceValue.innerText = totalPrice.toFixed(2);
 
-  //   const totalPriceFixed = totalPrice.toFixed(2);
-  //   document.getElementById("totalPrice").innerText = totalPriceFixed;
-
   if (totalPrice > 0) {
     document.getElementById("btn-2").removeAttribute("disabled");
   }
@@ -35,7 +32,6 @@ function btn1() {
     const discountPrice = totalPriceDiscount - totalPriceDiscount * 0.8;
     const discountPriceFixed = discountPrice.toFixed(2);
     document.getElementById("diccountPrice").innerText = discountPriceFixed;
-
     //   after discount price
     const afterDiscountPrice = totalPriceDiscount - totalPriceDiscount * 0.2;
     const afterDiscountPriceFixed = afterDiscountPrice.toFixed(2);
@@ -43,8 +39,6 @@ function btn1() {
       afterDiscountPriceFixed;
   }
 }
-
-
 const nameListBox = document.getElementById("productNameList");
 function btn2() {
   while(nameListBox.firstChild){
@@ -55,6 +49,6 @@ function btn2() {
   document.getElementById("afterDiccountPrice").innerText = "00";
   document.getElementById("btn-2").setAttribute("disabled", true);
   document.getElementById("btn1").setAttribute('disabled', true);
-  document.getElementById("couponCode").value = " ";
+  document.getElementById("couponCode").value = '';
 }
 
