@@ -41,14 +41,13 @@ function btn1() {
 }
 const nameListBox = document.getElementById("productNameList");
 function btn2() {
-  while(nameListBox.firstChild){
+  while (nameListBox.firstChild) {
     nameListBox.removeChild(nameListBox.firstChild);
   }
   document.getElementById("totalPrice").innerText = "00";
   document.getElementById("diccountPrice").innerText = "00";
   document.getElementById("afterDiccountPrice").innerText = "00";
   document.getElementById("btn-2").setAttribute("disabled", true);
-  document.getElementById("btn1").setAttribute('disabled', true);
-  document.getElementById("couponCode").value = '';
+  document.getElementById("btn1").setAttribute("disabled", true);
+  document.getElementById("couponCode").value = "";
 }
-
